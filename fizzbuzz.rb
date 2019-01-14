@@ -8,9 +8,18 @@ class FizzBuzz
 end
 
 describe FizzBuzz do
-  it 'should return "1" for 1' do
-    expect(subject.fizz_buzz(1)).to eq('1')
+  [
+    [1, '1'],
+    [2, '2'],
+    [3, 'Fizz'],
+    [6, 'Fizz'],
+  ] .each do |input, result|
+  it "should return #{input} for #{result}" do
+    expect(subject.fizz_buzz(input)).to eq(result)
   end
+end
+
+
 
   it 'should return "2" for 2' do
     expect(subject.fizz_buzz(2)).to eq('2')
