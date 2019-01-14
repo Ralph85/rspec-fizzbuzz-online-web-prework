@@ -22,4 +22,3 @@ describe FizzBuzz do
     expect(subject.fizz_buzz(input)).to eq(result)
   end
 end
-end
