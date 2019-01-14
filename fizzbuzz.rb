@@ -20,4 +20,7 @@ end
     expect(subject.fizz_buzz(3)).to eq("Fizz")
   end
 
-  
+  it 'should return "Fizz" for 6' do
+    expect(subject.fizz_buzz(6)).to eq("Fizz")
+  end
+end
