@@ -16,6 +16,7 @@ describe FizzBuzz do
     [6, 'Fizz'],
     [5, 'Buzz'],
     [10, 'Buzz'],
+    [15, 'FizzBuzz'],
   ] .each do |input, result|
   it "should return #{input} for #{result}" do
     expect(subject.fizz_buzz(input)).to eq(result)
