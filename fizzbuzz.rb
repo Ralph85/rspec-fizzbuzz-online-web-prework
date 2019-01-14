@@ -1,22 +1,23 @@
-require 'pry'
-def fizzbuzz(number)
-    return "nil" if is_not_divisible_by_three_or_five?(2)
-    return "FizzBuzz" if is_divisible_by_fifteen?(15)
-    return "Buzz" if is_divisible_by_five?(5)
-    return "Fizz" if is_divisible_by_three?(3)
-    numbers
+require 'rspec'
+
+class FizzBuzz
+  def fizz_buzz(number)
+    return 'Fizz' if number == 3
+    number.to_s
+  end
 end
-def is_divisible_by_three?(number)
-  number % 3 == 0
-  binding.pry
+
+describe FizzBuzz do
+  it 'should return "1" for 1' do
+    expect(subject.fizz_buzz(1)).to eq('1')
+  end
+
+  it 'should return "2" for 2' do
+    expect(subject.fizz_buzz(2)).to eq('2')
 end
-def is_divisible_by_five?(number)
-  number % 5 == 0
-end
-def is_divisible_by_fifteen?(number)
-  number % 15 == 0
-end
-def is_not_divisible_by_three_or_five?(number)
-  number % 2 == 0
-  binding.pry
-end
+
+  it 'should return "Fizz" for 3' do
+    expect(subject.fizz_buzz(3)).to eq("Fizz")
+  end
+
+  
