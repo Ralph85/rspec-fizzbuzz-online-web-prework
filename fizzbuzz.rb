@@ -2,7 +2,7 @@ require 'rspec'
 
 class FizzBuzz
   def fizz_buzz(number)
-    result = ''
+    result += 'FizzBuzz' if number % 15 = 0
     result += 'Fizz' if number % 3 == 0
     result += 'Buzz' if number % 5 == 0
     result = number.to_s if result ==
@@ -21,4 +21,5 @@ describe FizzBuzz do
   it "should return #{input} for #{result}" do
     expect(subject.fizz_buzz(input)).to eq(result)
   end
+end
 end
