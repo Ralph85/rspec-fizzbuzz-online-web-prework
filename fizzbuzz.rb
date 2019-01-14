@@ -12,8 +12,6 @@ end
 
 describe FizzBuzz do
   [
-    [1, '1'],
-    [2, '2'],
     [3, 'Fizz'],
     [6, 'Fizz'],
     [5, 'Buzz'],
