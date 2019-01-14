@@ -2,10 +2,10 @@ require 'rspec'
 
 class FizzBuzz
   def fizz_buzz(number)
-    return 'Fizz' if number % 3 == 0
-    return 'Buzz' if number % 5 == 0
-    number.to_s
-  end
+    result = ''
+    result = 'Fizz' if number % 3 == 0
+    result = 'Buzz' if number % 5 == 0
+    result = number.to_s if result ==
 end
 
 describe FizzBuzz do
