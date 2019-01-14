@@ -2,8 +2,8 @@ require 'rspec'
 
 class FizzBuzz
   def fizz_buzz(number)
-    return 'Fizz' if number == 3
-    return ''
+    return 'Fizz' if number % 3 == 0
+    return 'Buzz' if number % 5 == 0
     number.to_s
   end
 end
@@ -15,6 +15,7 @@ describe FizzBuzz do
     [3, 'Fizz'],
     [6, 'Fizz'],
     [5, 'Buzz'],
+    [10, 'Buzz'],
   ] .each do |input, result|
   it "should return #{input} for #{result}" do
     expect(subject.fizz_buzz(input)).to eq(result)
